@@ -1,0 +1,32 @@
+@prefix owl:       <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ent-party: <http://example.org/ontology/party#> .
+@prefix ent-loc:   <http://example.org/ontology/location#> .
+@prefix ent-bridge:<http://example.org/ontology/bridge#> .
+
+# MUST match the URI in catalog-v001.xml and master-ontology.ttl
+<http://example.org/ontology/bridge/party-location> a owl:Ontology ;
+    rdfs:label "Party-Location Bridge Ontology" ;
+    owl:imports <http://example.org/ontology/party> ,
+                <http://example.org/ontology/location> .
+
+# A Party receives correspondence at A Postal Address
+ent-bridge:receivesCorrespondenceAt a owl:ObjectProperty ;
+    rdfs:label "receives correspondence at" ;
+    rdfs:comment "A Party receives correspondence at A Postal Address" ;
+    rdfs:domain ent-party:Party ;
+    rdfs:range ent-loc:PostalAddress .
+
+# An Individual resides at A Postal Address
+ent-bridge:residesAt a owl:ObjectProperty ;
+    rdfs:label "resides at" ;
+    rdfs:comment "An Individual resides at A Postal Address" ;
+    rdfs:domain ent-party:Individual ;
+    rdfs:range ent-loc:PostalAddress .
+
+# An Organisation was incorporated in A Country
+ent-bridge:wasIncorporatedIn a owl:ObjectProperty ;
+    rdfs:label "was incorporated in" ;
+    rdfs:comment "An Organisation was incorporated in A Country" ;
+    rdfs:domain ent-party:Organisation ;
+    rdfs:range ent-loc:Country .

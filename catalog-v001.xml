@@ -1,0 +1,5 @@
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri name="http://example.org/ontology/party" uri="core/party.ttl"/>
+    <uri name="http://example.org/ontology/location" uri="core/location.ttl"/>
+    <uri name="http://example.org/ontology/bridge/party-location" uri="bridges/party-location-bridge.ttl"/>
+</catalog>

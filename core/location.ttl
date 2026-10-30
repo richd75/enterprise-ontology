@@ -1,0 +1,20 @@
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ent-loc:  <http://example.org/ontology/location#> .
+
+<http://example.org/ontology/location> a owl:Ontology ;
+    rdfs:label "Location Core Ontology" .
+
+ent-loc:Location a owl:Class ;
+    rdfs:label "Location" ;
+    rdfs:comment "A spatial region, address, or geographic entity." .
+
+ent-loc:Country a owl:Class ;
+    rdfs:subClassOf ent-loc:Location ;
+    rdfs:label "Country" ;
+    rdfs:comment "A sovereign nation state." .
+
+ent-loc:PostalAddress a owl:Class ;
+    rdfs:subClassOf ent-loc:Location ;
+    rdfs:label "Postal Address" ;
+    rdfs:comment "A structured physical delivery address." .

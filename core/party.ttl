@@ -1,0 +1,20 @@
+@prefix owl:       <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ent-party: <http://example.org/ontology/party#> .
+
+<http://example.org/ontology/party> a owl:Ontology ;
+    rdfs:label "Party Core Ontology" .
+
+ent-party:Party a owl:Class ;
+    rdfs:label "Party" ;
+    rdfs:comment "A legal entity or person capable of entering into agreements." .
+
+ent-party:Individual a owl:Class ;
+    rdfs:subClassOf ent-party:Party ;
+    rdfs:label "Individual" ;
+    rdfs:comment "An Individual that is a Party." .
+
+ent-party:Organisation a owl:Class ;
+    rdfs:subClassOf ent-party:Party ;
+    rdfs:label "Organisation" ;
+    rdfs:comment "An Organisation that is a Party." .

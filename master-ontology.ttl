@@ -1,0 +1,8 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/ontology/enterprise-master> a owl:Ontology ;
+    rdfs:label "Enterprise Master View" ;
+    owl:imports <http://example.org/ontology/party> ,
+                <http://example.org/ontology/location> ,
+                <http://example.org/ontology/bridge/party-location> .
