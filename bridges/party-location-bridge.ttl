@@ -1,14 +1,13 @@
 @prefix owl:       <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ent-party: <http://example.org/ontology/party#> .
-@prefix ent-loc:   <http://example.org/ontology/location#> .
-@prefix ent-bridge:<http://example.org/ontology/bridge#> .
+@prefix ent-party: <https://richd75.github.io/enterprise-ontology/core/party.ttl#> .
+@prefix ent-loc:   <https://richd75.github.io/enterprise-ontology/core/location.ttl#> .
+@prefix ent-bridge:<https://richd75.github.io/enterprise-ontology/bridges/party-location-bridge.ttl#> .
 
-# MUST match the URI in catalog-v001.xml and master-ontology.ttl
-<http://example.org/ontology/bridge/party-location> a owl:Ontology ;
+<https://richd75.github.io/enterprise-ontology/bridges/party-location-bridge.ttl> a owl:Ontology ;
     rdfs:label "Party-Location Bridge Ontology" ;
-    owl:imports <http://example.org/ontology/party> ,
-                <http://example.org/ontology/location> .
+    owl:imports <https://richd75.github.io/enterprise-ontology/core/party.ttl> ,
+                <https://richd75.github.io/enterprise-ontology/core/location.ttl> .
 
 # A Party receives correspondence at A Postal Address
 ent-bridge:receivesCorrespondenceAt a owl:ObjectProperty ;
@@ -21,6 +20,7 @@ ent-bridge:receivesCorrespondenceAt a owl:ObjectProperty ;
 ent-bridge:residesAt a owl:ObjectProperty ;
     rdfs:label "resides at" ;
     rdfs:comment "An Individual resides at A Postal Address" ;
+    rdfs:subPropertyOf ent-bridge:receivesCorrespondenceAt ;
     rdfs:domain ent-party:Individual ;
     rdfs:range ent-loc:PostalAddress .
 

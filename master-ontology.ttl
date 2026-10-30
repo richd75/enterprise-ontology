@@ -1,8 +1,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.org/ontology/enterprise-master> a owl:Ontology ;
+<https://richd75.github.io/enterprise-ontology/master-ontology.ttl> a owl:Ontology ;
     rdfs:label "Enterprise Master View" ;
-    owl:imports <http://example.org/ontology/party> ,
-                <http://example.org/ontology/location> ,
-                <http://example.org/ontology/bridge/party-location> .
+    owl:imports <https://richd75.github.io/enterprise-ontology/core/party.ttl> ,
+                <https://richd75.github.io/enterprise-ontology/core/location.ttl> ,
+                <https://richd75.github.io/enterprise-ontology/bridges/party-location-bridge.ttl> .

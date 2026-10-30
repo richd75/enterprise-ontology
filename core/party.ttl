@@ -1,8 +1,8 @@
 @prefix owl:       <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ent-party: <http://example.org/ontology/party#> .
+@prefix ent-party: <https://richd75.github.io/enterprise-ontology/core/party.ttl#> .
 
-<http://example.org/ontology/party> a owl:Ontology ;
+<https://richd75.github.io/enterprise-ontology/core/party.ttl> a owl:Ontology ;
     rdfs:label "Party Core Ontology" .
 
 ent-party:Party a owl:Class ;

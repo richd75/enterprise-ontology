@@ -1,8 +1,8 @@
 @prefix owl:      <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ent-loc:  <http://example.org/ontology/location#> .
+@prefix ent-loc:  <https://richd75.github.io/enterprise-ontology/core/location.ttl#> .
 
-<http://example.org/ontology/location> a owl:Ontology ;
+<https://richd75.github.io/enterprise-ontology/core/location.ttl> a owl:Ontology ;
     rdfs:label "Location Core Ontology" .
 
 ent-loc:Location a owl:Class ;
